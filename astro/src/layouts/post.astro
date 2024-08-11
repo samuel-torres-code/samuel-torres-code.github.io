@@ -1,0 +1,20 @@
+---
+const { frontmatter } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{frontmatter.title}</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Take me home</a>
+    </nav>
+    <article>
+      <h1>{frontmatter.title}</h1>
+      <p>By {frontmatter.author} on {frontmatter.pubDate.toString()}</p>
+      <slot />
+    </article>
+  </body>
+</html>

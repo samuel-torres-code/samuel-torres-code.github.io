@@ -1,0 +1,83 @@
+:root {
+    --green-100: #e6f8d1;
+    --green-200: #BBCF3A;
+    --green-300: #d6ebc3;
+    --green-400: #cae9be;
+    --green-500: #c1e2be;
+    --text-000: #3d3929;
+    --bkgd-color: #f0eee5;
+    background-color: var(--bkgd-color);
+    font-family: 'Courier New', monospace;
+    color:var(--text-000);
+    
+    
+}
+body {
+    margin: 0;
+}
+
+section, .home-page {
+    min-height: 10rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.intro-card {
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.me_svg-container {
+    padding-left: 2rem;
+}
+.snail-animation {
+        font-family: monospace;
+        white-space: pre;
+        font-size:6px;
+        text-align: center;
+        justify-self: start;
+        margin:0;
+    
+}
+
+.tree {
+    font-size:3px;
+}
+
+.animation-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+.trees{
+    display: flex;
+    flex-direction: row;
+}
+
+.project-container {
+    padding-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+}
+
+.project {
+    width: 6rem;
+    height: 6rem;
+    background-color: black;
+}
+
+.green-bkgd {
+    background-color: var(--green-200);
+}
+
+
+
