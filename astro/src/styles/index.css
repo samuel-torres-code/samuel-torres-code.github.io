@@ -5,32 +5,47 @@
     --green-400: #cae9be;
     --green-500: #c1e2be;
     --text-000: #3d3929;
-    --bkgd-color: #f0eee5;
+    --bkgd-color: #ffffff;
     background-color: var(--bkgd-color);
     font-family: 'Courier New', monospace;
     color:var(--text-000);
     
     
 }
+
+@font-face {
+    font-family: dot_matrix;
+    src: url(../content/BPdots.otf);
+  }
+  .tree {
+    font-size: 6px
+  }
 body {
-    margin: 0;
+    margin: .5rem;
 }
 
-section, .home-page {
-    min-height: 10rem;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.dot-matrix {
+    font-family: 'dot_matrix';
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.home-page {
+    min-height: 7rem;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
     justify-content: space-between;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .intro-card {
     display: flex;
     
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .me_svg-container {
@@ -46,27 +61,16 @@ section, .home-page {
     
 }
 
-.tree {
-    font-size:3px;
-}
 
-.animation-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: end;
-}
-.trees{
-    display: flex;
-    flex-direction: row;
-}
 
 .project-container {
     padding-top: 3rem;
     display: flex;
     flex-wrap: wrap;
     gap:1rem;
+    padding: 2rem;
+    max-height: 10rem;
+    overflow-y: scroll;
 }
 
 .project {
@@ -75,8 +79,19 @@ section, .home-page {
     background-color: black;
 }
 
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 40rem;
+}
+
 .green-bkgd {
-    background-color: var(--green-200);
+    background-color: var(--green-500);
+    border-top: 1px  var(--text-000) solid;
+    border-bottom: 1px  var(--text-000) solid;
+    
 }
 
 
