@@ -1,0 +1,18 @@
+---
+// Header.astro
+import '../styles/index.css';
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath } = Astro.props;
+---
+
+<header>
+    <span>
+        <h1>samuel torres</h1>
+    </span>
+    
+    <span class="subtitle">{currentPath}</span>
+</header>
+  

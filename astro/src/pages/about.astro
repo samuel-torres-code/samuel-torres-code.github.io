@@ -1,25 +1,45 @@
 ---
-const pageTitle = "About Me";
+import '../styles/index.css';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import resumePdf from '../content/Sam_Torres_Resume_2025.pdf';
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Samuel Torres</title>
 	</head>
 	<body>
-        <a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
-		<h1>{pageTitle}</h1>
-  <h2>... and my new Astro site!</h2>
+		<Header currentPath='/about'/>
+		<div class="container">
+		<Nav currentPath='/about'/>
+			<section>
+				<h1>
+					I'm Sam.
+				</h1>
+				<p>
+				 I am an engineer and amateur chef. I like to make things that serve people. 
+				</p>
+				Right now, I am taking a sabbatical to focus on personal projects. 
+			
+				<p>
+				Previously, I worked on distributed systems at Netflix, built DJ software for KANM, developed learning tools at the TAMU Sketch Recognition Lab, improved safety initiatives at Arena Energy, and maintain multiplayer gaming servers for my friends. 
+				</p>
+				<p>
+				I am interested in homelabs, fermentation, grilling, UX design, distributed systems, amateur radio, hifi sound systems, and leaving places better than I found them.
+				</p>
 
-  <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
+				<p>
+					For people who still use resumes, mine can be downloaded <a href={resumePdf} download="Samuel_Torres_Resume_2025.pdf">here</a>.
+				</p>
+			</section>
+		</div>
+		
+		
+		
 
-  <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-</body>
 	</body>
 </html>
