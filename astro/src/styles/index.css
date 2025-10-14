@@ -1,18 +1,21 @@
 :root {
     --text-000: #2d2d2d;    
-    --accent-color: #536907;    
+    --accent-color: #cfd4bd;    
     --bkgd-color: #FFFCF0;     
     --light-gray: #f5f5f5;
     --border-gray: #ddd;
 
-    --side-margin: 12rem;
+    --side-margin: 1rem;
     background-color: var(--bkgd-color);
     font-family: 'Panama', 'Times New Roman', 'sans-serif';
     color:var(--text-000);
+
     
     
     
 }
+
+
 
 @font-face {
     font-family: dot_matrix;
@@ -21,7 +24,7 @@
 
 .container {
     display: flex;
-    justify-content: flex-start;
+    gap: 2rem;
 
 }
 
@@ -30,9 +33,10 @@ nav {
 
 }
 
+
 section {
     grid-column: 2;
-    line-height: 1.7;          
+    line-height: 1.2;          
     font-size: 1.1rem;         
     color: var(--primary-text);
 }
@@ -51,13 +55,28 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: var(--side-margin);
-    margin-right: var(--side-margin);
+    margin: 0
 }
 
 
-header > span {
+header > a > span {
     display: flex;
+}
+
+header > a:hover {
+    text-decoration: none;
+}
+
+::selection {
+    background: var(--accent-color);
+    color: black;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: var(--accent-color);
+    color: black;
+    text-shadow: none;
 }
 
 h1 {
@@ -68,19 +87,55 @@ h1 {
 nav {
     display: flex;
     flex-direction: column;
-    margin-left: var(--side-margin);
-    margin-right: var(--side-margin);
+    transition: all 0.8s ease-in-out;
     /* float: left; */
     
 }
 
 section {
     line-height: 1.6;
-    max-width: 65ch; /* Optimal reading width */
 }
 
-nav > a {
-    font-size: 1.5rem;
+.bio {
+  flex: 0 0 25rem;
+  margin: 0
+}
+.bio > h1 {
+  margin: .5rem 0
+}
+.bio > p {
+  margin: .1rem 0
+}
+
+.projects > h1 {
+  margin: .5rem 0
+}
+.projects > p {
+  margin: .1rem 0
+}
+.text-emphasis {
+  font-style: italic
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  
+
+}
+
+li {
+  list-style-type: square;
+  margin: 0 1.5rem;
+}
+
+
+body {
+  padding: 0 1rem; /* Add some padding for mobile */
+}
+
+a {
+    font-size: 1.1rem;
     font-weight: 300;
     color:var(--text-000);
     text-decoration: underline;
@@ -88,8 +143,7 @@ nav > a {
     
 }
 
-
-nav > a:hover {
+a:hover {
     text-decoration-color: var(--text-000);
 }
 
@@ -102,4 +156,87 @@ nav > a:hover {
     font-size: 0.9rem;
     color: var(--accent-color);
     font-family: 'dot_matrix', monospace;
+  }
+
+  /* Style the content area */
+.content-area {
+    width:100%;
+    min-width: 0; 
+    min-height: 0;
+  }
+  .projects {
+    flex: 1;
+    overflow-y: scroll;
+  }
+.project-header-text {
+  padding-bottom: 2rem;
+}
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem;
+    flex: 1;
+  }
+  
+  .project-card {
+    background: none; /* Remove background */
+    border-radius: 0; /* Remove rounded corners */
+    padding: .5rem;
+    width: 10rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* justify-content: center; */
+    transition: transform 0.3s ease;
+    outline: var(--text-000) solid 1px;
+  }
+
+  .project-title {
+    margin-top: 0rem;
+    font-style: italic;
+
+  }
+  
+  .project-card:hover {
+    transform: translateX(8px); /* Subtle slide instead of lift */
+  }
+
+  .project-image-container {
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .project-image {
+    
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+
+    
+
+
+  }
+  
+  .project-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-000);
+    line-height: 1;
+        margin-bottom: .5rem;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+    margin-bottom: .5rem;
   }

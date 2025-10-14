@@ -2,30 +2,11 @@
 import '../styles/index.css';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Samuel Torres</title>
-	</head>
-	<body>
-		<Header currentPath='/blog' />
-		<div class="container">
-
-		<Nav currentPath='/blog'/>
-		<section>
-			Under construction
-		</section>
-	</div>
-
-		
-		
-		
-		
-		
-
-	</body>
-</html>
+<BaseLayout path="/blog">
+	<section>
+		Under construction
+	</section>
+</BaseLayout>

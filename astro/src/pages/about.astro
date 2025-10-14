@@ -3,19 +3,43 @@ import '../styles/index.css';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 import resumePdf from '../content/Sam_Torres_Resume_2025.pdf';
+import BaseLayout from '../layouts/BaseLayout.astro';
+// Sample project data - you'd typically get this from a content collection
+const projects = [
+  {
+    title: "Spinnaker",
+    image: "/spinnaker.jpg", 
+    description: "Product improvements for Netflix's CI/CD system",
+    link: "https://spinnaker.io/"
+  },
+  {
+    title: "KANM Student Radio",
+    image: "/kanm.jpg",
+    description: "Website and DJ software for KANM Student Radio",
+    link: "https://kanm.org/"
+  },
+  {
+    title: "Mechanix",
+    image: "/mechanix.jpg",
+    description: "Application to teach physics content via sketch recongnition",
+    link: "https://people.engr.tamu.edu/hammond/hammond/mechanix.php.html"
+  },
+  {
+    title: "Isabella",
+    image: "/project-isabella.jpg",
+    description: "My personal media homelab",
+    link: "/projects/isabella"
+  },
+  {
+    title: "POB Phoenix",
+    image: "/project-phoenix.jpg",
+    description: "Personnel cataloging tool for offshore operations.",
+    link: "/projects/phoenix"
+  }
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Samuel Torres</title>
-	</head>
-	<body>
-		<Header currentPath='/about'/>
-		<div class="container">
-		<Nav currentPath='/about'/>
+<BaseLayout path="/about" pageTitle="Samuel Torres">
 			<section>
 				<h1>
 					I'm Sam.
@@ -36,10 +60,4 @@ import resumePdf from '../content/Sam_Torres_Resume_2025.pdf';
 					For people who still use resumes, mine can be downloaded <a href={resumePdf} download="Samuel_Torres_Resume_2025.pdf">here</a>.
 				</p>
 			</section>
-		</div>
-		
-		
-		
-
-	</body>
-</html>
+		</BaseLayout>

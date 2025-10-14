@@ -5,13 +5,13 @@ interface Props {
   currentPath?: string;
 }
 
+import Tree from './Tree.astro';
+
 const { currentPath } = Astro.props;
 ---
 
 <header>
-    <span>
-        <h1>samuel torres</h1>
-    </span>
+      <a href="/"><span><h1>samuel torres</h1><Tree /></span></a>
     
     <span class="subtitle">{currentPath}</span>
 </header>
