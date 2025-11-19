@@ -15,11 +15,12 @@ import { projects } from './data/projects.js';
                     <h2 class="project-title">{project.title}</h2>
                     <p class="project-description">{project.description}</p>
                     </div>
-                    {project.video && 
-                      <video autoplay loop muted playsinline>
-                      <source src={project.video} type="video/mp4" />
-                    </video>
-                    }
+                    <div class="project-icon-container">
+                      <div class="project-icon" set:html={project.visual} />
+                    </div>
+
+                    
+                    
                     
                 </a>
               ))}

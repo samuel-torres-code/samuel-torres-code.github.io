@@ -258,11 +258,31 @@ a:hover {
   }
 
   .project-card > video {
-    max-width: 320px;
+    max-width: 200px;
     display: block; /* Removes extra space below video */
     width: 100%;
     height: auto;
   }
+.project-icon-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+ .project-icon {
+  width: 120px;
+  max-height: 120px; /* set your preferred max */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-icon :global(svg) {
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+}
   .header-left {
     display: flex;
     flex-direction: row;
