@@ -11,28 +11,28 @@ export const projects = [
   {
     title: "spinnaker",
     description: "Product improvements for Netflix's CI/CD system",
-    link: "/projects/spinnaker",
+    link: "https://spinnaker.io/",
     visual: spinnakerVisual
 
   },
   {
     title: "kanm",
     description: "Website redesign for KANM Student Radio",
-    link: "/projects/kanm",
+    link: "https://kanm.org/",
     visual: kanmVisual
 
   },
   {
     title: "bitjockey",
     description: "Open source DJ automation software",
-    link: "/projects/bitjockey",
+    link: "https://bitjockey.kanm.org/",
     visual: bitjockeyVisual
 
   },
   {
     title: "mechanix",
     description: "Research for a sketch recognition physics teaching tool",
-    link: "/projects/mechanix",
+    link: "https://srltamu.com/mechanix.php",
     visual: mechanixVisual
 
   },
