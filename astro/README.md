@@ -45,3 +45,5 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+ffmpeg -i kanm2.mov -vf scale=640:-1 -c:v libx264 -crf 28 -pix_fmt yuv420p -movflags +faststart kanm2.mp4

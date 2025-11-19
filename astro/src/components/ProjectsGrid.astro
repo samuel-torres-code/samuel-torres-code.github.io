@@ -1,71 +1,11 @@
 ---
 import '../styles/index.css';
-import BaseLayout from '../layouts/BaseLayout.astro';
-// Sample project data - you'd typically get this from a content collection
-import { Image } from 'astro:assets';
-import Placeholder from '../images/placeholder.jpg'
-import Kanm from '../images/kanm.gif'
-import Spinnaker from '../images/spinnaker.gif'
+import { projects } from './data/projects.js';
 
-const projects = [
-  {
-    title: "Spinnaker",
-    image: Spinnaker,
-    description: "Product improvements for Netflix's CI/CD system",
-    link: "https://spinnaker.io/"
-  },
-  {
-    title: "KANM Student Radio",
-    image: Kanm,
-    description: "Website redesign for KANM Student Radio",
-    link: "https://kanm.org/"
-  },
-  {
-    title: "Bitjockey",
-    description: "Open source DJ automation software",
-    link: "https://bitjockey.kanm.org/"
-  },
-  {
-    title: "Mechanix",
-    description: "Research for a sketch recognition physics teaching tool",
-    link: "https://people.engr.tamu.edu/hammond/hammond/mechanix.php.html"
-  },
-  // {
-  //   title: "Torres Brothers Garage",
-  //   image: "/project-isabella.jpg",
-  //   description: "Wordpress application for my father's passion",
-  //   link: "http://torresbrothers.com/"
-  // },
-  {
-    title: "Isabella",
-    description: "My personal media homelab",
-    link: "/projects/isabella"
-  },
-  {
-    title: "POB Phoenix",
-    description: "Personnel cataloging tool built for offshore operations",
-    link: "/projects/phoenix"
-  },
-  {
-    title: "POB Phoenix",
-    description: "Personnel cataloging tool built for offshore operations",
-    link: "/projects/phoenix"
-  },
-  {
-    title: "POB Phoenix",
-    description: "Personnel cataloging tool built for offshore operations",
-    link: "/projects/phoenix"
-  },
-  {
-    title: "POB Phoenix",
-    description: "Personnel cataloging tool built for offshore operations",
-    link: "/projects/phoenix"
-  }
-];
 ---
 <section class="projects">
-  <p class="project-header-text">A collection of things I've built.</p>
         <div class="content-area">
+        <p class="project-header-text">A collection of things I've built.</p>
             
             
             <div class="projects-grid">
@@ -75,9 +15,12 @@ const projects = [
                     <h2 class="project-title">{project.title}</h2>
                     <p class="project-description">{project.description}</p>
                     </div>
-                    <div class="project-image-container">
-                    <Image src={project.image? project.image: Placeholder} alt="placeholder" class="project-image"/>
-                    </div>
+                    {project.video && 
+                      <video autoplay loop muted playsinline>
+                      <source src={project.video} type="video/mp4" />
+                    </video>
+                    }
+                    
                 </a>
               ))}
             </div>

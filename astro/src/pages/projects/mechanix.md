@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ProjectLayout.astro'
 title: 'Mechanix'
 pubDate: 2025-09-16
 description: 'Application to teach physics content via sketch recongnition'

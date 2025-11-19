@@ -2,6 +2,7 @@
 import '../styles/index.css';
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
+import ViewTransitions from 'astro/components/ViewTransitions.astro';
 const { pageTitle, path } = Astro.props;
 ---
 
@@ -10,6 +11,7 @@ const { pageTitle, path } = Astro.props;
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<ViewTransitions />
 		<title>Samuel Torres</title>
 	</head>
 	<body>
