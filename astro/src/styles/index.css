@@ -24,7 +24,8 @@ h1,h2,h3,h4,h5,header {
     display: flex;
     gap: 2rem;
     flex: 1; 
-    overflow: auto;
+    overflow: auto
+    
 
 }
 
@@ -213,11 +214,13 @@ a:hover {
   .projects {
     flex: 1;
     padding-left: 1rem;
-    overflow-y: hidden;
+    overflow-y: auto;
+    justify-content: center; 
+    min-height: 0;
   }
 .project-header-text {
   margin-top: 0rem;
-  padding-left: 2.5rem;
+  text-align: center;
 }
   
   .projects-grid {
@@ -226,7 +229,8 @@ a:hover {
     gap: 2.5rem;
     padding: 2.5rem;
     flex: 1;
-    overflow-y: scroll;
+    justify-content: center; /* Center the grid items */
+    justify-items: center; /* Center items within their grid cells */
   }
   
   .project-card {
@@ -321,3 +325,29 @@ a:hover {
     margin: 0;
     margin-bottom: .5rem;
   }
+
+
+/* Make container stack vertically on smaller screens */
+@media (max-width: 768px) {
+    body {
+      height: auto
+    }
+    .container {
+        flex-direction: column;
+        overflow: visible; 
+    }
+    
+    .content-area {
+      height: 100%;
+    }
+
+    .projects {
+        overflow-y: visible; 
+    }
+    
+    .bio {
+        flex: 0 0 auto; /* Allow bio to size naturally on mobile */
+    }
+    
+    
+}
