@@ -5,11 +5,14 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout path={frontmatter.path} pageTitle="Samuel Torres">
-	<div>
+	<div class="project-container">
+		<div class="project-header">
 	<h1>{frontmatter.title}</h1>
-	<p>{frontmatter.time}</p>
+	<p class="date">{frontmatter.time}</p>
+	</div>
 	<div>
 		<slot />
 	</div>
-</div>
+	</div>
+	
 </BaseLayout>

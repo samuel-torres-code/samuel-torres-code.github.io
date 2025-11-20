@@ -6,7 +6,8 @@
     --border-gray: #ddd;
     --transition-speed: .4s;
 
-    --side-margin: 1rem;
+    --side-margin: 2rem;
+    --top-margin: .5rem;
     background-color: var(--bkgd-color);
     font-family: 'Times New Roman', 'sans-serif';
     color:var(--text-000);
@@ -22,9 +23,11 @@ h1,h2,h3,h4,h5,header {
 
 .container {
     display: flex;
-    gap: 2rem;
     flex: 1; 
-    overflow: auto
+    min-height: 0;
+    gap: 0;
+    align-items: flex-start;
+    
     
 
 }
@@ -56,7 +59,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0
+    margin: 0;
 }
 
 
@@ -128,8 +131,9 @@ section {
 }
 
 .bio {
-  flex: 0 0 25rem;
-  margin: 0
+  flex: 0 1 25rem;
+  margin: 0;
+  overflow-y: hidden;
 }
 .bio > h1 {
   margin: .5rem 0
@@ -174,11 +178,18 @@ li {
 
 
 body {
-  padding: 0 2rem; /* Add some padding for mobile */
+  padding-left: var(--side-margin);
+  padding-right: var(--side-margin);
+  padding-top: var(--top-margin);
+  background-color: var(--bkgd-color);
   margin: 0;
   display: flex;
+  flex: 1;
+  min-height: 0;
   flex-direction: column;
   height: 100vh;
+  overflow-y: hidden;
+  box-sizing: border-box; /* Include padding in height calculation */
 }
 
 a {
@@ -205,32 +216,42 @@ a:hover {
 
   /* Style the content area */
 .content-area {
-    width:100%;
+    flex: 1;
     min-width: 0; 
     min-height: 0;
     display: flex;
     flex-direction: column;
+    /* overflow: hidden; Constrain children */
   }
   .projects {
     flex: 1;
     padding-left: 1rem;
-    overflow-y: auto;
-    justify-content: center; 
+    overflow: hidden; 
     min-height: 0;
+    display: flex;
+    flex-direction: column;
   }
 .project-header-text {
   margin-top: 0rem;
-  text-align: center;
+  flex-shrink: 0; /* Don't shrink the header */
 }
-  
+
   .projects-grid {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto; 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 2.5rem; 
     gap: 2.5rem;
-    padding: 2.5rem;
-    flex: 1;
-    justify-content: center; /* Center the grid items */
-    justify-items: center; /* Center items within their grid cells */
+    align-content: start; /* Align grid content to top */
+  }
+
+  .project-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
   
   .project-card {
@@ -243,11 +264,15 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; */
-    /* justify-content: center; */
+    align-items: center;
+    justify-content: center;
     transition: transform var(--transition-speed) ease;
     outline: var(--text-000) solid 1px;
     background-color: var(--bkgd-color);
+  }
+
+  .outline {
+    outline: var(--text-000) solid 1px;
   }
 
   .project-title {
@@ -260,11 +285,17 @@ a:hover {
     background-color: transparent;
   }
   
+  p.date {
+    font-family: 'Courier New';
+  }
 
   .project-image-container {
     display: inline-block;
   }
 
+  .project-container {
+    max-width: 50rem;
+  }
   .project-card > video {
     max-width: 200px;
     display: block; /* Removes extra space below video */
@@ -337,16 +368,17 @@ a:hover {
         overflow: visible; 
     }
     
-    .content-area {
-      height: 100%;
-    }
+    
 
     .projects {
         overflow-y: visible; 
+        margin-left: 0;
+        padding-left: 0;
     }
     
     .bio {
         flex: 0 0 auto; /* Allow bio to size naturally on mobile */
+        
     }
     
     
