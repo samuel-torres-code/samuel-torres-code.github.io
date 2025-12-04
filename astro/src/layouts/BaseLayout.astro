@@ -1,23 +1,20 @@
 ---
-import '../styles/index.css';
-import Header from '../components/Header.astro';
-import Nav from '../components/Nav.astro';
+import "../styles/index.css";
+import Header from "../components/Header.astro";
+import Nav from "../components/Nav.astro";
 const { pageTitle, path } = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Samuel Torres</title>
-	</head>
-	<body>
-		<Header currentPath={path} />
-		<div class="container">
-            <slot />
-			
-		</div>
-
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Samuel Torres</title>
+  </head>
+  <body>
+    <div class="container">
+      <slot />
+    </div>
+  </body>
 </html>

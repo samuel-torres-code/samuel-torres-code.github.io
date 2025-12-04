@@ -1,27 +1,20 @@
 ---
-import '../styles/index.css';
-import { projects } from './data/projects.js';
-
+import "../styles/index.css";
+import { projects } from "./data/projects.js";
 ---
-<section class="projects">
-          <h1>stuff i did</h1>
-            
-            
-            <div class="projects-grid">
-              {projects.map(project => (
-                <a href={project.link} class="project-card">
-                    <div>
-                    <h2 class="project-title">{project.title}</h2>
-                    <p class="project-description">{project.description}</p>
-                    </div>
-                    <div class="project-icon-container">
-                      <div class="project-icon" set:html={project.visual} />
-                    </div>
 
-                    
-                    
-                    
-                </a>
-              ))}
-            </div>
-</section>
+<div class="projects-grid">
+  {
+    projects.map((project) => (
+      <a href={project.link} class="project-card">
+        <div>
+          <h2 class="project-title">{project.title}</h2>
+          <p class="project-description">{project.description}</p>
+        </div>
+        <div class="project-icon-container">
+          <div class="project-icon" set:html={project.visual} />
+        </div>
+      </a>
+    ))
+  }
+</div>
