@@ -62,7 +62,7 @@ section {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   margin: 0;
 }
 
@@ -117,7 +117,7 @@ section {
 
 li {
   list-style-type: square;
-  margin: 0 1.5rem;
+  margin: .5rem 1.5rem;
 }
 
 body {
@@ -222,15 +222,10 @@ body {
   gap: 2.5rem;
   align-content: start; /* Align grid content to top */
   justify-items: center;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
-.project-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
+
 
 .project-card {
   background: none; /* Remove background */
@@ -264,17 +259,18 @@ body {
   background-color: transparent;
 }
 
-p.date {
-  font-family: "Courier New";
-}
+
 
 .project-image-container {
   display: inline-block;
 }
 
-.project-container {
-  max-width: 50rem;
+.project-page-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
+
+
 .project-card > video {
   max-width: 200px;
   display: block; /* Removes extra space below video */
