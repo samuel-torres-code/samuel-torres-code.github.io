@@ -1,0 +1,63 @@
+---
+import '../styles/index.css';
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import resumePdf from '../content/Sam_Torres_Resume_2025.pdf';
+import BaseLayout from '../layouts/BaseLayout.astro';
+// Sample project data - you'd typically get this from a content collection
+const projects = [
+  {
+    title: "Spinnaker",
+    image: "/spinnaker.jpg", 
+    description: "Product improvements for Netflix's CI/CD system",
+    link: "https://spinnaker.io/"
+  },
+  {
+    title: "KANM Student Radio",
+    image: "/kanm.jpg",
+    description: "Website and DJ software for KANM Student Radio",
+    link: "https://kanm.org/"
+  },
+  {
+    title: "Mechanix",
+    image: "/mechanix.jpg",
+    description: "Application to teach physics content via sketch recongnition",
+    link: "https://people.engr.tamu.edu/hammond/hammond/mechanix.php.html"
+  },
+  {
+    title: "Isabella",
+    image: "/project-isabella.jpg",
+    description: "My personal media homelab",
+    link: "/projects/isabella"
+  },
+  {
+    title: "POB Phoenix",
+    image: "/project-phoenix.jpg",
+    description: "Personnel cataloging tool for offshore operations.",
+    link: "/projects/phoenix"
+  }
+];
+---
+
+<BaseLayout path="/about" pageTitle="Samuel Torres">
+			<section>
+				<h1>
+					I'm Sam.
+				</h1>
+				<p>
+				 I am an engineer and amateur chef. I like to make things that serve people. 
+				</p>
+				Right now, I am taking a sabbatical to focus on personal projects. 
+			
+				<p>
+				Previously, I worked on distributed systems at Netflix, built DJ software for KANM, developed learning tools at the TAMU Sketch Recognition Lab, improved safety initiatives at Arena Energy, and maintain multiplayer gaming servers for my friends. 
+				</p>
+				<p>
+				I am interested in homelabs, fermentation, grilling, UX design, distributed systems, amateur radio, hifi sound systems, and leaving places better than I found them.
+				</p>
+
+				<p>
+					For people who still use resumes, mine can be downloaded <a href={resumePdf} download="Samuel_Torres_Resume_2025.pdf">here</a>.
+				</p>
+			</section>
+		</BaseLayout>

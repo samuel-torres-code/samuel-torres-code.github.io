@@ -1,0 +1,32 @@
+---
+// Nav.astro
+import '../styles/index.css';
+import Tree from './Tree.astro';
+
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath } = Astro.props;
+
+const navItems = [
+  { href: '/about', text: 'about' },
+  { href: '/projects', text: 'projects' },
+//   { href: '/blog', text: 'blog' }
+];
+---
+
+<nav>
+  {navItems.map(item => (
+    <a 
+      href={item.href}
+      class:list={[
+        'nav-link',
+        { 'active': currentPath === item.href }
+      ]}
+    >
+      {item.text}
+    </a>
+  ))}
+  <Tree />
+</nav>

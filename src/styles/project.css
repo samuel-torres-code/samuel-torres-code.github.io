@@ -1,0 +1,58 @@
+body {
+    overflow: auto
+
+}
+.project-sections {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  flex: 1;
+  min-width: 0;
+}
+
+
+.project-container {
+    max-width: 50rem;
+    min-width: 10rem;
+    margin-top: 1rem;
+    align-self: center;
+}
+
+.project-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-body {
+    p {
+        margin-bottom: 1rem;
+    }
+    a {
+        font-size: 1rem;
+    }
+    li {
+        list-style-type: square;
+        margin: .5rem 1.5rem;
+    }
+    ul {
+        margin: 0;
+        padding-left: .5rem;
+
+    }
+}
+
+p.date {
+  font-family: "Courier New";
+}
+
+/* Make container stack vertically on smaller screens */
+@media (max-width: 900px) {
+  .project-sections {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  
+  
+}

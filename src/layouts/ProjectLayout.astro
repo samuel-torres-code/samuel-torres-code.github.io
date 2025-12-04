@@ -1,0 +1,24 @@
+---
+import HomeButton from "../components/HomeButton.astro";
+import BaseLayout from "./BaseLayout.astro";
+
+import "../styles/project.css";
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout path={frontmatter.path} pageTitle="Samuel Torres">
+  <div class="project-sections">
+    <HomeButton />
+
+    <div class="project-container">
+      <div class="project-header">
+        <h1>{frontmatter.title}</h1>
+        <p class="date">{frontmatter.time}</p>
+      </div>
+      <div class="project-body">
+        <slot />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,20 @@
+---
+import "../styles/index.css";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectsGrid from "../components/ProjectsGrid.astro";
+import BioContent from "../components/BioContent.astro";
+import Header from "../components/Header.astro";
+---
+
+<BaseLayout path="/" pageTitle="Samuel Torres">
+  <div class="index-sections">
+    <div class="bio">
+      <Header />
+      <BioContent />
+    </div>
+    <div class="projects">
+      <ProjectsGrid />
+    </div>
+  </div>
+</BaseLayout>
