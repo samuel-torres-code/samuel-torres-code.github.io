@@ -1,0 +1,55 @@
+.container-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.loading-state,
+.error-state {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+}
+
+.error-state {
+  color: #e53e3e;
+}
+
+.container-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th {
+  text-align: start;
+  font-weight: 600;
+}
+
+
+.container-table td {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 10rem;
+}
+
+.status-badge {
+  display: inline-block;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+
+@media (max-width: 768px) {
+  .container-table {
+    font-size: 0.85rem;
+  }
+  
+  .container-table th,
+  .container-table td {
+    padding: 0.5rem;
+  }
+}

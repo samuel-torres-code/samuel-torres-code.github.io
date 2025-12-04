@@ -12,7 +12,7 @@ image:
 tags: ["homelab"]
 ---
 
-import ContainerGrid from "../../components/ContainerGrid.astro";
+import ContainerGrid from "../../components/ContainerGrid.tsx";
 
 `isabella` is the nickname for my home server that I run. She was built as a hobby project during _quarantine_ to host my media library, game servers and family photo albums.
 
@@ -24,4 +24,4 @@ The project is constantly evolving, so you can see the active docker containers 
 
 # containers
 
-<ContainerGrid />
+<ContainerGrid client:visible />
